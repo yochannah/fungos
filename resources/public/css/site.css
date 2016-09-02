@@ -82,6 +82,43 @@ main {
 .statusbox .organism {
   margin-left: 1em;
 }
+.searchbox {
+  display: flex;
+  flex-direction: column;
+}
+.searchbox .gene-input {
+  display: flex;
+  flex-direction: column;
+}
+.searchbox .input-organism {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchbox button {
+  border: 0;
+  border-radius: 2px;
+  background-color: #ffc107;
+  border-bottom: solid 2px #ffce3a;
+  border-right: solid 2px #ffd454;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 1em 2em;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.4s;
+}
+.searchbox button:hover {
+  background: #ffce3a;
+  border-bottom: solid 2px #e2aa00;
+  border-right: solid 2px #ecb100;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+.searchbox button:focus {
+  background: #e7ae00;
+  transition: all 0.2s;
+}
 .foot {
   align-self: flex-end;
 }

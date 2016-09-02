@@ -4,7 +4,9 @@
 (defn organism-dropdown []
   "returns a dropdown containing all of the organism names"
   (let [organisms (re-frame/subscribe [:organisms])]
-    [:label "Organism"  [:select {:on-change (fn [e] (re-frame/dispatch [:select-input-organism (aget e "target" "value")]))}
+    [:label.input-organism
+      [:p "For organism"]
+      [:select {:on-change (fn [e] (re-frame/dispatch [:select-input-organism (aget e "target" "value")]))}
      (map (fn [[id details]]
         ^{:key id}
         [:option {:value (js->clj id)}
@@ -16,7 +18,7 @@
   "visual ui component for the search."
   []
   [:div.searchbox
-    [:label "Type a Gene name"
+    [:label.gene-input [:p "Type a Gene name"]
       [:textarea {:placeholder "e.g. 'GATA1'..."}]]
     [organism-dropdown]
     [:button "Search"]]
