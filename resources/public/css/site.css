@@ -85,3 +85,9 @@ main {
 .foot {
   align-self: flex-end;
 }
+footer {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}

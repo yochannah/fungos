@@ -10,8 +10,6 @@
 .default-shadow {
     box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
-
-
 //for the inline svg icons
 .icon {
     vertical-align: top;
@@ -35,7 +33,7 @@ h4,
 h5,
 h6 {
     font-family: 'Domine','Georgia', serif;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 #app,
@@ -58,8 +56,8 @@ aside {
     background: #f0f0f0;
     flex-grow: 1;
     padding: @spacer;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -69,46 +67,57 @@ main {
 
 .statusbox {
     .icon {
-      color:#fff;
-      width: @spacer*2;
-      height: @spacer*2;
-      padding:4px;
+        color: #fff;
+        width: @spacer*2;
+        height: @spacer*2;
+        padding: 4px;
 
-        &.zebrafish  {
+        &.zebrafish {
             background: @zebracolor;
         }
 
-        &.mouse  {
+        &.mouse {
             background: @mousecolor;
         }
 
-        &.rat  {
+        &.rat {
             background: @ratcolor;
         }
 
-        &.human  {
+        &.human {
             background: @humancolor;
         }
 
-        &.yeast  {
+        &.yeast {
             background: @yeastcolor;
         }
 
-        &.worm  {
+        &.worm {
             background: @wormcolor;
         }
 
-        &.fly  {
+        &.fly {
             background: @flycolor;
         }
     }
 
     .status {
-      display:flex;
-      align-items:center;
+        display: flex;
+        align-items: center;
     }
 
-    .organism {margin-left:@spacer;}
+    .organism {
+        margin-left: @spacer;
+    }
 }
 
-.foot {align-self:flex-end}
+.foot {
+    align-self: flex-end;
+}
+
+footer {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
