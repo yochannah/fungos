@@ -1,6 +1,14 @@
 .default-shadow {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
+.icon {
+  vertical-align: top;
+  margin-top: 1px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
 body {
   color: #333;
   background: #fff;
@@ -38,45 +46,37 @@ main {
   flex-grow: 3;
   padding: 1em;
 }
-.statusbox .organism {
-  /*        &:before {
-            content: "";
-            width: 2em;
-            height: 2em;
-            display: inline-block;
-            background: pink;
-        }*/
+.statusbox .icon {
+  color: #fff;
+  width: 2em;
+  height: 2em;
+  padding: 4px;
 }
-.statusbox .organism.zebrafish {
+.statusbox .icon.zebrafish {
   background: #ff5722;
 }
-.statusbox .organism.mouse {
+.statusbox .icon.mouse {
   background: #00bcd4;
 }
-.statusbox .organism.rat {
+.statusbox .icon.rat {
   background: #e91e63;
 }
-.statusbox .organism.human {
+.statusbox .icon.human {
   background: #8bc34a;
 }
-.statusbox .organism.yeast {
+.statusbox .icon.yeast {
   background: #ffc107;
 }
-.statusbox .organism.worm {
+.statusbox .icon.worm {
   background: #3f51b5;
 }
-.statusbox .organism.fly {
+.statusbox .icon.fly {
   background: #9c27b0;
 }
 .statusbox .status {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
-.icon {
-  vertical-align: top;
-  margin-top: 1px;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
+.statusbox .organism {
+  margin-left: 1em;
 }

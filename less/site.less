@@ -11,6 +11,17 @@
     box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
+
+//for the inline svg icons
+.icon {
+    vertical-align: top;
+    margin-top: 1px;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
 body {
     color: #333;
     background: #fff;
@@ -55,14 +66,11 @@ main {
 }
 
 .statusbox {
-    .organism {
-/*        &:before {
-            content: "";
-            width: 2em;
-            height: 2em;
-            display: inline-block;
-            background: pink;
-        }*/
+    .icon {
+      color:#fff;
+      width: @spacer*2;
+      height: @spacer*2;
+      padding:4px;
 
         &.zebrafish  {
             background: @zebracolor;
@@ -95,18 +103,8 @@ main {
 
     .status {
       display:flex;
-  //    border:solid 1px red;
-      align-items:flex-start;
-  //    > * {border:solid 1px chartreuse;}
+      align-items:center;
     }
-}
 
-//for the inline svg icons
-.icon {
-    vertical-align: top;
-    margin-top: 1px;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
+    .organism {margin-left:@spacer;}
 }

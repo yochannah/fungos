@@ -30,8 +30,11 @@
    (let [organisms (re-frame/subscribe [:organisms])]
 
       (map (fn [[id details]]
-         ^{:key id}
-         [:div.status [:div.organism {:class id} (:common details) " - " (:abbrev details)]]
+          ^{:key id}
+          [:div.status
+            [:svg.icon {:class id} [:use {:xlinkHref (str "#icon-" (clj->js id))}]]
+            [:div.organism
+             (:common details) " - " (:abbrev details)]]
       ) @organisms))
    ]
   )
