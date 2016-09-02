@@ -4,4 +4,8 @@
 (defn main-panel []
   (let [name (re-frame/subscribe [:name])]
     (fn []
-      [:div "Hello from " @name])))
+      [:div.approot
+       [:aside [:h1 "Cross organism InterMine template search"]]
+       [:main "Search for genez." ]
+       "Hello from " @name
+       ])))
