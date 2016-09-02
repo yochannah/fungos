@@ -38,7 +38,7 @@
 
 
 (defn main-panel []
-  (let [name (re-frame/subscribe [:name])]
+  (let [name "f"]
     (fn []
       [:div.approot
         [:aside [:h2 "Search"]
@@ -47,5 +47,5 @@
           [statusbox]
         ]
        [:main [:h1 "Cross organism InterMine template search"]
-        "Search for genez. Hello from " @name]
+        "Search for genez. Hello from " ]
        ])))
