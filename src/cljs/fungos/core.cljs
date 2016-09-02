@@ -4,7 +4,7 @@
               [devtools.core :as devtools]
               [fungos.handlers]
               [fungos.subs]
-              [fungos.views :as views]
+              [fungos.view.views :as views]
               [fungos.config :as config]))
 
 

@@ -12,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Domine';
+  font-family: 'Domine', 'Georgia', serif;
   font-weight: normal;
 }
 #app,
@@ -71,4 +71,12 @@ main {
 .statusbox .status {
   display: flex;
   align-items: flex-start;
+}
+.icon {
+  vertical-align: top;
+  margin-top: 1px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
