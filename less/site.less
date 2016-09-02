@@ -1,21 +1,101 @@
+@zebracolor: #FF5722;
+@yeastcolor: #FFC107;
+@humancolor: #8BC34A;
+@wormcolor: #3F51B5;
+@mousecolor: #00BCD4;
+@ratcolor: #E91E63;
+@flycolor: #9C27B0;
+@spacer: 1em;
+
+.default-shadow {
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
 body {
-    color:#333;
-    background:#fff;
+    color: #333;
+    background: #fff;
     font-family: "Open sans", helvetica, sans-serif;
 }
 
-h1, h2, h4, h4, h5, h6 {
-  font-family:'Exo'
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Exo';
 }
 
-#app, html, body, .approot {height:100%;padding:0;margin:0;}
-
+#app,
+.approot,
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 .approot {
-  box-sizing:border-box;
-  display:flex;
-  align-items:stretch;
-  border:solid 1px gold;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
 }
 
-aside {background:#f0f0f0}
+aside {
+    .default-shadow;
+    background: #f0f0f0;
+    flex-grow: 1;
+    padding: @spacer;
+}
+
+main {
+    flex-grow: 3;
+    padding: @spacer;
+}
+
+.statusbox {
+    .organism {
+/*        &:before {
+            content: "";
+            width: 2em;
+            height: 2em;
+            display: inline-block;
+            background: pink;
+        }*/
+
+        &.zebrafish  {
+            background: @zebracolor;
+        }
+
+        &.mouse  {
+            background: @mousecolor;
+        }
+
+        &.rat  {
+            background: @ratcolor;
+        }
+
+        &.human  {
+            background: @humancolor;
+        }
+
+        &.yeast  {
+            background: @yeastcolor;
+        }
+
+        &.worm  {
+            background: @wormcolor;
+        }
+
+        &.fly  {
+            background: @flycolor;
+        }
+    }
+
+    .status {
+      display:flex;
+  //    border:solid 1px red;
+      align-items:flex-start;
+  //    > * {border:solid 1px chartreuse;}
+    }
+}

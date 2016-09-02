@@ -1,3 +1,6 @@
+.default-shadow {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
 body {
   color: #333;
   background: #fff;
@@ -5,16 +8,16 @@ body {
 }
 h1,
 h2,
-h4,
+h3,
 h4,
 h5,
 h6 {
   font-family: 'Exo';
 }
 #app,
-html,
+.approot,
 body,
-.approot {
+html {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -23,8 +26,48 @@ body,
   box-sizing: border-box;
   display: flex;
   align-items: stretch;
-  border: solid 1px gold;
 }
 aside {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   background: #f0f0f0;
+  flex-grow: 1;
+  padding: 1em;
+}
+main {
+  flex-grow: 3;
+  padding: 1em;
+}
+.statusbox .organism {
+  /*        &:before {
+            content: "";
+            width: 2em;
+            height: 2em;
+            display: inline-block;
+            background: pink;
+        }*/
+}
+.statusbox .organism.zebrafish {
+  background: #ff5722;
+}
+.statusbox .organism.mouse {
+  background: #00bcd4;
+}
+.statusbox .organism.rat {
+  background: #e91e63;
+}
+.statusbox .organism.human {
+  background: #8bc34a;
+}
+.statusbox .organism.yeast {
+  background: #ffc107;
+}
+.statusbox .organism.worm {
+  background: #3f51b5;
+}
+.statusbox .organism.fly {
+  background: #9c27b0;
+}
+.statusbox .status {
+  display: flex;
+  align-items: flex-start;
 }
