@@ -46,4 +46,5 @@
       [:div.organism-selector "Searching 7 organisms"]
       [searchbox]
       [statusbox]
+     [:footer [:a.foot {:href "#/about"} "About this tool"]]
 ]))

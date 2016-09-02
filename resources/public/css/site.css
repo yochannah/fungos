@@ -41,6 +41,8 @@ aside {
   background: #f0f0f0;
   flex-grow: 1;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 main {
   flex-grow: 3;
@@ -79,4 +81,7 @@ main {
 }
 .statusbox .organism {
   margin-left: 1em;
+}
+.foot {
+  align-self: flex-end;
 }
