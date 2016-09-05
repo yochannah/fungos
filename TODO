@@ -1,0 +1,26 @@
+5 September: The cross-intermine template project is being temporarily rested in favour of other projects. Here's my set of notes:
+
+## Which templates to use?
+
+Well, you can sort this by ubiquity:
+ http://mine-comparison.apps.intermine.org/templates
+
+ Right now there's only one template name shared amongst all 7 mines, and it's Gene_Protein. So instead, let's extract the query from the template and run the queries directly in each mine. Show results separately on a mine by mine basis if they succeed.
+
+## How do we query each mine?
+
+Input: Gene(s). Organism. Assume we search all available output organisms automatically. doesn't need to be on the screen by default (as the go tool was).
+
+### Data flow
+
+1. Take input listed above. Resolve in the origin organism mine (e.g. a zebrafish gene needs to be run through ID resolution in zebrafishmine). Save this data as it maps from the input gene to the primary ids.
+2. Query each mine based on the resolved primary ids.
+  2.1 Advanced query stategy
+    - try direct, e.g. ask zebra if it has mouse homologues
+    - reverse - ask mouse if it has zebra homologues
+    - via human hub, same as above direct and reverse, then to mouse...
+3. before we do this, create a table of inputs, outputs, and expected results. static snapshot data from each mine and ensure the tests resemble the expected results from static data.
+
+## The other thing:
+
+This interface might be suitable for many cross-intermine searches. Kthxbai. 

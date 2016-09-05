@@ -25,7 +25,7 @@
   )
 
 (defn statusbox
-  "visual ui component to dispay loading statuses."
+  "visual ui component to display loading statuses."
   []
   [:div.statusbox
    [:h3 "Status"]

@@ -90,6 +90,9 @@ main {
   display: flex;
   flex-direction: column;
 }
+.searchbox .gene-input p {
+  margin-bottom: 0;
+}
 .searchbox .input-organism {
   display: flex;
   justify-content: space-between;
